@@ -4,12 +4,18 @@
         <attribute name="name" optional="YES" attributeType="String" syncable="YES"/>
         <relationship name="products" optional="YES" maxCount="1" deletionRule="Nullify" destinationEntity="Products" inverseName="cart" inverseEntity="Products" syncable="YES"/>
     </entity>
+    <entity name="Favorites" representedClassName="Favorites" syncable="YES" codeGenerationType="class">
+        <attribute name="name" optional="YES" attributeType="String" syncable="YES"/>
+        <relationship name="products" optional="YES" maxCount="1" deletionRule="Nullify" destinationEntity="Products" inverseName="favorite" inverseEntity="Products" syncable="YES"/>
+    </entity>
     <entity name="Products" representedClassName="Products" syncable="YES" codeGenerationType="class">
         <attribute name="name" optional="YES" attributeType="String" syncable="YES"/>
         <relationship name="cart" optional="YES" toMany="YES" deletionRule="Cascade" destinationEntity="Cart" inverseName="products" inverseEntity="Cart" syncable="YES"/>
+        <relationship name="favorite" optional="YES" maxCount="1" deletionRule="Nullify" destinationEntity="Favorites" inverseName="products" inverseEntity="Favorites" syncable="YES"/>
     </entity>
     <elements>
         <element name="Cart" positionX="-54" positionY="-9" width="128" height="75"/>
-        <element name="Products" positionX="-63" positionY="-18" width="128" height="75"/>
+        <element name="Products" positionX="-63" positionY="-18" width="128" height="90"/>
+        <element name="Favorites" positionX="-63" positionY="9" width="128" height="75"/>
     </elements>
 </model>

@@ -32,4 +32,14 @@ class ProductCell: UITableViewCell {
         
     }
     
+    @IBAction func favoriteProduct(_ sender: Any) {
+        // Gives the ability to a user to be able to favorite items
+        let favorite = Favorites(context: coreDataStack.viewContext)
+        
+        favorite.name = nameOfProductLabel.text
+        
+        favorite.setValue(nameOfProductLabel.text, forKey: "name")
+        
+        coreDataStack.saveTo(context: coreDataStack.viewContext)
+    }
 }
