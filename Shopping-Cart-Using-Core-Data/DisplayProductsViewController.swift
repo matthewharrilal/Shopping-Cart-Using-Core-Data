@@ -34,6 +34,9 @@ class DisplayProducts: UITableViewController {
         }
         
         print("These are the products \(products)")
+        
+        let favorite = Favorites(context: coreDataStack.viewContext)
+        print("This is the value for the key name \(favorite.value(forKey: "name"))")
     }
     
     override func didReceiveMemoryWarning() {

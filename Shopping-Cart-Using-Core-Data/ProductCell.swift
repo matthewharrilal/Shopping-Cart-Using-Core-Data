@@ -25,7 +25,7 @@ class ProductCell: UITableViewCell {
         
         // Set that value in the core data stack however the changes have not yet been made
         cart.setValue(nameOfProductLabel.text, forKey: "name")
-    
+        
         // Then save those changes due to the reason that we have to update the ui therefore we have to save the changes to the view context
         coreDataStack.saveTo(context: coreDataStack.viewContext)
         
@@ -38,8 +38,12 @@ class ProductCell: UITableViewCell {
         
         favorite.name = nameOfProductLabel.text
         
+        
+        
         favorite.setValue(nameOfProductLabel.text, forKey: "name")
         
         coreDataStack.saveTo(context: coreDataStack.viewContext)
+        
+        
     }
 }

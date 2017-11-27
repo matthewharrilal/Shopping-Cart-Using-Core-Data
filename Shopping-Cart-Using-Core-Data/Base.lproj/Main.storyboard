@@ -5,6 +5,7 @@
     </device>
     <dependencies>
         <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="13173"/>
+        <capability name="Navigation items with more than one left or right bar item" minToolsVersion="7.0"/>
         <capability name="Safe area layout guides" minToolsVersion="9.0"/>
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
@@ -92,7 +93,6 @@
                                             <state key="normal" title="Favorite"/>
                                             <connections>
                                                 <action selector="favoriteProduct:" destination="2zg-TA-u10" eventType="touchUpInside" id="5XQ-jW-1qD"/>
-                                                <segue destination="ecS-yp-rYk" kind="show" identifier="toFavorites" id="lR1-MQ-QAi"/>
                                             </connections>
                                         </button>
                                     </subviews>
@@ -108,11 +108,18 @@
                         </connections>
                     </tableView>
                     <navigationItem key="navigationItem" title="Products" id="88G-Ao-nFn">
-                        <barButtonItem key="rightBarButtonItem" title="Cart" id="zgb-2j-r97">
-                            <connections>
-                                <segue destination="OQc-uc-pxC" kind="show" id="Nfk-ND-RpL"/>
-                            </connections>
-                        </barButtonItem>
+                        <rightBarButtonItems>
+                            <barButtonItem title="Cart" id="zgb-2j-r97">
+                                <connections>
+                                    <segue destination="OQc-uc-pxC" kind="show" id="Nfk-ND-RpL"/>
+                                </connections>
+                            </barButtonItem>
+                            <barButtonItem title="Fav" id="Fgb-ga-PTm">
+                                <connections>
+                                    <segue destination="ecS-yp-rYk" kind="show" id="pMI-S7-2EO"/>
+                                </connections>
+                            </barButtonItem>
+                        </rightBarButtonItems>
                     </navigationItem>
                 </tableViewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="FQr-ff-9HC" userLabel="First Responder" sceneMemberID="firstResponder"/>
@@ -173,7 +180,7 @@
                 </tableViewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="huq-ls-gJ3" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="1812" y="764"/>
+            <point key="canvasLocation" x="1754" y="873"/>
         </scene>
         <!--Navigation Controller-->
         <scene sceneID="ZkV-Zb-e2E">
