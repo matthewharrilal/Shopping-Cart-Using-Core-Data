@@ -11,15 +11,15 @@ import CoreData
 import UIKit
 
 
-public final class ShoppingCart {
-    static let instance = ShoppingCart()
+public final class CoreDataStack {
+    static let instance = CoreDataStack()
     
     // Creating the perisistent container to hold the managed object context
     private lazy var persistentContainer: NSPersistentContainer = {
         
         // The container we are creating goes by the name of Shopping Cart
         // MARK: TODO Why is the syntax like this?
-        let container = NSPersistentContainer(name: "ShoppingCart")
+        let container = NSPersistentContainer(name: "Shopping_Cart_Using_Core_Data")
         
         // MARK: TODO When do we define which store we want to use?
         
