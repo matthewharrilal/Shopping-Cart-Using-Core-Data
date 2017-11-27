@@ -15,6 +15,7 @@
 		1C83DF411FCBE4EB005758DC /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 1C83DF3F1FCBE4EB005758DC /* LaunchScreen.storyboard */; };
 		1C83DF491FCBEA57005758DC /* DisplayProductsViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1C83DF481FCBEA57005758DC /* DisplayProductsViewController.swift */; };
 		1C83DF4B1FCBEAD7005758DC /* CoreDataStack.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1C83DF4A1FCBEAD7005758DC /* CoreDataStack.swift */; };
+		1CA744281FCC9383007C109C /* ProductCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1CA744271FCC9383007C109C /* ProductCell.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -28,6 +29,7 @@
 		1C83DF421FCBE4EB005758DC /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		1C83DF481FCBEA57005758DC /* DisplayProductsViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DisplayProductsViewController.swift; sourceTree = "<group>"; };
 		1C83DF4A1FCBEAD7005758DC /* CoreDataStack.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CoreDataStack.swift; sourceTree = "<group>"; };
+		1CA744271FCC9383007C109C /* ProductCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ProductCell.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -69,6 +71,7 @@
 				1C83DF3F1FCBE4EB005758DC /* LaunchScreen.storyboard */,
 				1C83DF421FCBE4EB005758DC /* Info.plist */,
 				1C83DF3A1FCBE4EB005758DC /* Shopping_Cart_Using_Core_Data.xcdatamodeld */,
+				1CA744271FCC9383007C109C /* ProductCell.swift */,
 			);
 			path = "Shopping-Cart-Using-Core-Data";
 			sourceTree = "<group>";
@@ -148,6 +151,7 @@
 				1C83DF4B1FCBEAD7005758DC /* CoreDataStack.swift in Sources */,
 				1C83DF3C1FCBE4EB005758DC /* Shopping_Cart_Using_Core_Data.xcdatamodeld in Sources */,
 				1C83DF361FCBE4EB005758DC /* AddProductViewController.swift in Sources */,
+				1CA744281FCC9383007C109C /* ProductCell.swift in Sources */,
 				1C83DF341FCBE4EB005758DC /* AppDelegate.swift in Sources */,
 				1C83DF491FCBEA57005758DC /* DisplayProductsViewController.swift in Sources */,
 			);

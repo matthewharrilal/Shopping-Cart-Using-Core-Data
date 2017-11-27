@@ -30,6 +30,7 @@ class AddProductViewController: UIViewController {
     
     
     @IBAction func seeProductsButton(_ sender: Any) {
+        self.performSegue(withIdentifier: "displayProducts", sender: nil)
     }
     
     @IBAction func addToCartButton(_ sender: Any) {
@@ -38,7 +39,7 @@ class AddProductViewController: UIViewController {
         guard let productName = nameOfProductTextField.text else {return}
         
         // We are access the attributes of the Product Entity on the private queue because we do not need any ui updates
-        let product = Products(context: coreDataStack.privateContext)
+        let product = Products(context: coreDataStack.viewContext)
         
         // Set the value of the attribute equal to the name the user passed in as the name of the product
         product.name = productName
@@ -50,7 +51,8 @@ class AddProductViewController: UIViewController {
         // When set then save those changes to the view context because we are going to want to display that data or the name of the product on the cell
         coreDataStack.saveTo(context: coreDataStack.viewContext)
         
-        self.performSegue(withIdentifier: "displayProducts", sender: nil)
+                
+        self.performSegue(withIdentifier: "displayCart", sender: nil)
         
     }
     

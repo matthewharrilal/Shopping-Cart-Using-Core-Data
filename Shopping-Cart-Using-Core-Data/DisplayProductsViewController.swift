@@ -12,7 +12,13 @@ import CoreData
 
 class DisplayProducts: UITableViewController {
     let coreDataStack = CoreDataStack.instance
-    var products = [Products]()
+    var products = [Products]() {
+        didSet {
+            DispatchQueue.main.async {
+                self.tableView.reloadData()
+            }
+        }
+    }
     
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -20,13 +26,14 @@ class DisplayProducts: UITableViewController {
         do {
             let result = try coreDataStack.viewContext.fetch(fetch)
             self.products = result
-            print(result)
             self.tableView.reloadData()
         }
         catch {
             let nserror = error as NSError?
             print("Unable to fetch the results from core data \(error), \(error.localizedDescription)")
         }
+        
+        print("These are the products \(products)")
     }
     
     override func didReceiveMemoryWarning() {
@@ -35,6 +42,12 @@ class DisplayProducts: UITableViewController {
     
     override func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
         let cell = tableView.dequeueReusableCell(withIdentifier: "cell", for: indexPath)
+        let product = products[indexPath.row]
+        cell.textLabel?.text = product.name
         return cell
+    }
+    
+    override func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
+        return products.count
     }
 }
