@@ -4,10 +4,12 @@
         <relationship name="products" optional="YES" maxCount="1" deletionRule="Nullify" destinationEntity="Products" inverseName="cart" inverseEntity="Products" syncable="YES"/>
     </entity>
     <entity name="Products" representedClassName="Products" syncable="YES" codeGenerationType="class">
-        <relationship name="cart" optional="YES" maxCount="1" deletionRule="Nullify" destinationEntity="Cart" inverseName="products" inverseEntity="Cart" syncable="YES"/>
+        <attribute name="id" optional="YES" attributeType="Integer 32" defaultValueString="0" usesScalarValueType="YES" syncable="YES"/>
+        <attribute name="name" optional="YES" attributeType="String" syncable="YES"/>
+        <relationship name="cart" optional="YES" toMany="YES" deletionRule="Cascade" destinationEntity="Cart" inverseName="products" inverseEntity="Cart" syncable="YES"/>
     </entity>
     <elements>
-        <element name="Products" positionX="-63" positionY="-18" width="128" height="60"/>
+        <element name="Products" positionX="-63" positionY="-18" width="128" height="90"/>
         <element name="Cart" positionX="-54" positionY="-9" width="128" height="60"/>
     </elements>
 </model>

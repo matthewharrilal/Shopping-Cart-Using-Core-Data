@@ -8,22 +8,26 @@
 
 /* Begin PBXBuildFile section */
 		1C83DF341FCBE4EB005758DC /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1C83DF331FCBE4EB005758DC /* AppDelegate.swift */; };
-		1C83DF361FCBE4EB005758DC /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1C83DF351FCBE4EB005758DC /* ViewController.swift */; };
+		1C83DF361FCBE4EB005758DC /* AddProductViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1C83DF351FCBE4EB005758DC /* AddProductViewController.swift */; };
 		1C83DF391FCBE4EB005758DC /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 1C83DF371FCBE4EB005758DC /* Main.storyboard */; };
 		1C83DF3C1FCBE4EB005758DC /* Shopping_Cart_Using_Core_Data.xcdatamodeld in Sources */ = {isa = PBXBuildFile; fileRef = 1C83DF3A1FCBE4EB005758DC /* Shopping_Cart_Using_Core_Data.xcdatamodeld */; };
 		1C83DF3E1FCBE4EB005758DC /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 1C83DF3D1FCBE4EB005758DC /* Assets.xcassets */; };
 		1C83DF411FCBE4EB005758DC /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 1C83DF3F1FCBE4EB005758DC /* LaunchScreen.storyboard */; };
+		1C83DF491FCBEA57005758DC /* DisplayProductsViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1C83DF481FCBEA57005758DC /* DisplayProductsViewController.swift */; };
+		1C83DF4B1FCBEAD7005758DC /* CoreDataStack.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1C83DF4A1FCBEAD7005758DC /* CoreDataStack.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
 		1C83DF301FCBE4EB005758DC /* Shopping-Cart-Using-Core-Data.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "Shopping-Cart-Using-Core-Data.app"; sourceTree = BUILT_PRODUCTS_DIR; };
 		1C83DF331FCBE4EB005758DC /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
-		1C83DF351FCBE4EB005758DC /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
+		1C83DF351FCBE4EB005758DC /* AddProductViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AddProductViewController.swift; sourceTree = "<group>"; };
 		1C83DF381FCBE4EB005758DC /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
 		1C83DF3B1FCBE4EB005758DC /* Shopping_Cart_Using_Core_Data.xcdatamodel */ = {isa = PBXFileReference; lastKnownFileType = wrapper.xcdatamodel; path = Shopping_Cart_Using_Core_Data.xcdatamodel; sourceTree = "<group>"; };
 		1C83DF3D1FCBE4EB005758DC /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		1C83DF401FCBE4EB005758DC /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		1C83DF421FCBE4EB005758DC /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		1C83DF481FCBEA57005758DC /* DisplayProductsViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DisplayProductsViewController.swift; sourceTree = "<group>"; };
+		1C83DF4A1FCBEAD7005758DC /* CoreDataStack.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CoreDataStack.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -57,8 +61,10 @@
 			isa = PBXGroup;
 			children = (
 				1C83DF331FCBE4EB005758DC /* AppDelegate.swift */,
-				1C83DF351FCBE4EB005758DC /* ViewController.swift */,
+				1C83DF351FCBE4EB005758DC /* AddProductViewController.swift */,
+				1C83DF481FCBEA57005758DC /* DisplayProductsViewController.swift */,
 				1C83DF371FCBE4EB005758DC /* Main.storyboard */,
+				1C83DF4A1FCBEAD7005758DC /* CoreDataStack.swift */,
 				1C83DF3D1FCBE4EB005758DC /* Assets.xcassets */,
 				1C83DF3F1FCBE4EB005758DC /* LaunchScreen.storyboard */,
 				1C83DF421FCBE4EB005758DC /* Info.plist */,
@@ -139,9 +145,11 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				1C83DF4B1FCBEAD7005758DC /* CoreDataStack.swift in Sources */,
 				1C83DF3C1FCBE4EB005758DC /* Shopping_Cart_Using_Core_Data.xcdatamodeld in Sources */,
-				1C83DF361FCBE4EB005758DC /* ViewController.swift in Sources */,
+				1C83DF361FCBE4EB005758DC /* AddProductViewController.swift in Sources */,
 				1C83DF341FCBE4EB005758DC /* AppDelegate.swift in Sources */,
+				1C83DF491FCBEA57005758DC /* DisplayProductsViewController.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -279,6 +287,7 @@
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_STYLE = Automatic;
+				DEVELOPMENT_TEAM = R4WEEFNVWZ;
 				INFOPLIST_FILE = "Shopping-Cart-Using-Core-Data/Info.plist";
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = "m.Shopping-Cart-Using-Core-Data";
@@ -293,6 +302,7 @@
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_STYLE = Automatic;
+				DEVELOPMENT_TEAM = R4WEEFNVWZ;
 				INFOPLIST_FILE = "Shopping-Cart-Using-Core-Data/Info.plist";
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = "m.Shopping-Cart-Using-Core-Data";
