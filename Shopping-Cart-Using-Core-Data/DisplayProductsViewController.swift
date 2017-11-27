@@ -41,9 +41,9 @@ class DisplayProducts: UITableViewController {
     }
     
     override func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
-        let cell = tableView.dequeueReusableCell(withIdentifier: "cell", for: indexPath)
+        let cell = tableView.dequeueReusableCell(withIdentifier: "cell", for: indexPath) as! ProductCell
         let product = products[indexPath.row]
-        cell.textLabel?.text = product.name
+        cell.nameOfProductLabel?.text = product.name
         return cell
     }
     

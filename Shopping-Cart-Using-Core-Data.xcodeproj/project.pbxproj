@@ -16,6 +16,7 @@
 		1C83DF491FCBEA57005758DC /* DisplayProductsViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1C83DF481FCBEA57005758DC /* DisplayProductsViewController.swift */; };
 		1C83DF4B1FCBEAD7005758DC /* CoreDataStack.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1C83DF4A1FCBEAD7005758DC /* CoreDataStack.swift */; };
 		1CA744281FCC9383007C109C /* ProductCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1CA744271FCC9383007C109C /* ProductCell.swift */; };
+		1CA7442A1FCC9546007C109C /* CartTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1CA744291FCC9546007C109C /* CartTableViewController.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -30,6 +31,7 @@
 		1C83DF481FCBEA57005758DC /* DisplayProductsViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DisplayProductsViewController.swift; sourceTree = "<group>"; };
 		1C83DF4A1FCBEAD7005758DC /* CoreDataStack.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CoreDataStack.swift; sourceTree = "<group>"; };
 		1CA744271FCC9383007C109C /* ProductCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ProductCell.swift; sourceTree = "<group>"; };
+		1CA744291FCC9546007C109C /* CartTableViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CartTableViewController.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -65,6 +67,7 @@
 				1C83DF331FCBE4EB005758DC /* AppDelegate.swift */,
 				1C83DF351FCBE4EB005758DC /* AddProductViewController.swift */,
 				1C83DF481FCBEA57005758DC /* DisplayProductsViewController.swift */,
+				1CA744291FCC9546007C109C /* CartTableViewController.swift */,
 				1C83DF371FCBE4EB005758DC /* Main.storyboard */,
 				1C83DF4A1FCBEAD7005758DC /* CoreDataStack.swift */,
 				1C83DF3D1FCBE4EB005758DC /* Assets.xcassets */,
@@ -150,6 +153,7 @@
 			files = (
 				1C83DF4B1FCBEAD7005758DC /* CoreDataStack.swift in Sources */,
 				1C83DF3C1FCBE4EB005758DC /* Shopping_Cart_Using_Core_Data.xcdatamodeld in Sources */,
+				1CA7442A1FCC9546007C109C /* CartTableViewController.swift in Sources */,
 				1C83DF361FCBE4EB005758DC /* AddProductViewController.swift in Sources */,
 				1CA744281FCC9383007C109C /* ProductCell.swift in Sources */,
 				1C83DF341FCBE4EB005758DC /* AppDelegate.swift in Sources */,

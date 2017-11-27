@@ -55,7 +55,7 @@
             </objects>
             <point key="canvasLocation" x="456.80000000000001" y="118.29085457271366"/>
         </scene>
-        <!--Display Products-->
+        <!--Title-->
         <scene sceneID="mvD-ZE-34R">
             <objects>
                 <tableViewController id="fYM-hv-ydo" customClass="DisplayProducts" customModule="Shopping_Cart_Using_Core_Data" customModuleProvider="target" sceneMemberID="viewController">
@@ -81,10 +81,16 @@
                                         <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="FM2-Yd-rkQ">
                                             <rect key="frame" x="265" y="6" width="81" height="30"/>
                                             <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                            <state key="normal" title="Button"/>
+                                            <state key="normal" title="Add To Cart"/>
+                                            <connections>
+                                                <action selector="addToCartButton:" destination="2zg-TA-u10" eventType="touchUpInside" id="r97-Ed-wG8"/>
+                                            </connections>
                                         </button>
                                     </subviews>
                                 </tableViewCellContentView>
+                                <connections>
+                                    <outlet property="nameOfProductLabel" destination="mCE-6y-ksh" id="lEZ-GE-mnd"/>
+                                </connections>
                             </tableViewCell>
                         </prototypes>
                         <connections>
@@ -92,10 +98,45 @@
                             <outlet property="delegate" destination="fYM-hv-ydo" id="UP2-5C-MKE"/>
                         </connections>
                     </tableView>
+                    <navigationItem key="navigationItem" title="Title" id="88G-Ao-nFn">
+                        <barButtonItem key="rightBarButtonItem" title="Cart" id="zgb-2j-r97">
+                            <connections>
+                                <segue destination="OQc-uc-pxC" kind="show" id="Nfk-ND-RpL"/>
+                            </connections>
+                        </barButtonItem>
+                    </navigationItem>
                 </tableViewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="FQr-ff-9HC" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
             <point key="canvasLocation" x="1312.8" y="108.39580209895054"/>
+        </scene>
+        <!--Cart Table View Controller-->
+        <scene sceneID="Gti-Dq-OjZ">
+            <objects>
+                <tableViewController id="OQc-uc-pxC" customClass="CartTableViewController" customModule="Shopping_Cart_Using_Core_Data" customModuleProvider="target" sceneMemberID="viewController">
+                    <tableView key="view" clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="-1" estimatedRowHeight="-1" sectionHeaderHeight="28" sectionFooterHeight="28" id="giJ-Rz-JKz">
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                        <prototypes>
+                            <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" selectionStyle="default" indentationWidth="10" id="Wpo-2D-nQf">
+                                <rect key="frame" x="0.0" y="28" width="375" height="44"/>
+                                <autoresizingMask key="autoresizingMask"/>
+                                <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" insetsLayoutMarginsFromSafeArea="NO" tableViewCell="Wpo-2D-nQf" id="3wO-Hd-yQc">
+                                    <rect key="frame" x="0.0" y="0.0" width="375" height="43.5"/>
+                                    <autoresizingMask key="autoresizingMask"/>
+                                </tableViewCellContentView>
+                            </tableViewCell>
+                        </prototypes>
+                        <connections>
+                            <outlet property="dataSource" destination="OQc-uc-pxC" id="UGV-cJ-YfK"/>
+                            <outlet property="delegate" destination="OQc-uc-pxC" id="duI-hS-J5c"/>
+                        </connections>
+                    </tableView>
+                </tableViewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="cZ0-Cn-NLq" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="2162" y="123"/>
         </scene>
         <!--Navigation Controller-->
         <scene sceneID="ZkV-Zb-e2E">

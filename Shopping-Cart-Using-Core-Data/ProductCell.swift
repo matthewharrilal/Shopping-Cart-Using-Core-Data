@@ -12,6 +12,14 @@ import CoreData
 
 class ProductCell: UITableViewCell {
     
+    let coreDataStack = CoreDataStack.instance
     
+    @IBOutlet weak var nameOfProductLabel: UILabel!
+    
+    @IBAction func addToCartButton(_ sender: UIButton) {
+        // When the user taps on the add to cart button the item gets added to the cart
+        let cart = Cart(context: coreDataStack.viewContext)
+        
+    }
     
 }
