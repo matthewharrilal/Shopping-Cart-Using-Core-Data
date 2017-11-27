@@ -19,7 +19,11 @@ class ProductCell: UITableViewCell {
     @IBAction func addToCartButton(_ sender: UIButton) {
         // When the user taps on the add to cart button the item gets added to the cart
         let cart = Cart(context: coreDataStack.viewContext)
+        cart.name = nameOfProductLabel.text
         
+        cart.setValue(nameOfProductLabel.text, forKey: "name")
+        
+        coreDataStack.saveTo(context: coreDataStack.viewContext)
     }
     
 }
