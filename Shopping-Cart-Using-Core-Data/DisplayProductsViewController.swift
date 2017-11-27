@@ -51,4 +51,27 @@ class DisplayProducts: UITableViewController {
         return products.count
     }
     
+    override func tableView(_ tableView: UITableView, commit editingStyle: UITableViewCellEditingStyle, forRowAt indexPath: IndexPath) {
+        if editingStyle == .delete {
+            // Gaining access the the data in the view context of our core data stack
+            let managedObjectContext = coreDataStack.viewContext
+            
+            // Now that we have access we also have to gain access to the cell that the user is trying to delete
+            let product = products[indexPath.row]
+            
+            // Now that we have the cell the user is trying to delete we then have to delete from core data
+            managedObjectContext.delete(product)
+            
+            do {
+                //Have to save the changes we made to the managed object context
+                try managedObjectContext.save()
+                self.tableView.reloadData()
+            }
+            catch {
+                // If there is an error we want to see what the error is
+                let nserror = error as NSError?
+                print("Error deleting the product \(nserror), \(nserror?.localizedDescription)")
+            }
+        }
+    }
 }
