@@ -22,12 +22,12 @@ class FavoritesTableViewController: UITableViewController {
         do {
             let result = try coreDataStack.viewContext.fetch(fetch)
             self.favorites = result
-            print("This is the result \(result)")
+            
             self.tableView.reloadData()
         }
         catch {
             let nserror = error as NSError?
-            print("Unresolved error failure to favorite item \(nserror), \(nserror?.localizedDescription)")
+             ("Unresolved error failure to favorite item \(nserror), \(nserror?.localizedDescription)")
         }
     }
     

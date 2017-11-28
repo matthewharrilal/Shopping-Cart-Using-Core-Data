@@ -20,7 +20,7 @@ class AddProductViewController: UIViewController {
     override func viewDidLoad() {
         super.viewDidLoad()
         // Do any additional setup after loading the view, typically from a nib.
-        print("This is the view context \(coreDataStack.viewContext.value(forKey: "name"))")
+       
     }
 
     override func didReceiveMemoryWarning() {

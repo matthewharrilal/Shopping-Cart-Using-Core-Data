@@ -9,7 +9,7 @@
 import Foundation
 import UIKit
 import CoreData
-
+     
 class ProductCell: UITableViewCell {
     
     let coreDataStack = CoreDataStack.instance
@@ -38,12 +38,14 @@ class ProductCell: UITableViewCell {
         
         favorite.name = nameOfProductLabel.text
         
-        
+        print("This is the value for the key name : \(favorite.value(forKey: "name"))")
         
         favorite.setValue(nameOfProductLabel.text, forKey: "name")
         
+        
+        if favorite.value(forKey: "name") == nil {
         coreDataStack.saveTo(context: coreDataStack.viewContext)
         
-        
+        }
     }
 }
