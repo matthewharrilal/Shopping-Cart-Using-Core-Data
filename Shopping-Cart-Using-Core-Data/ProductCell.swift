@@ -12,23 +12,19 @@ import CoreData
      
 class ProductCell: UITableViewCell {
     
+    
+    
     let coreDataStack = CoreDataStack.instance
     
     @IBOutlet weak var nameOfProductLabel: UILabel!
     
-    @IBAction func addToCartButton(_ sender: UIButton) {
-        // When the user taps on the add to cart button the item gets added to the cart
-        let cart = Cart(context: coreDataStack.viewContext)
-        
-        //Grab the text the user passes in as the name of the product
-        cart.name = nameOfProductLabel.text
-        
-        // Set that value in the core data stack however the changes have not yet been made
-        cart.setValue(nameOfProductLabel.text, forKey: "name")
-        
-        // Then save those changes due to the reason that we have to update the ui therefore we have to save the changes to the view context
-        coreDataStack.saveTo(context: coreDataStack.viewContext)
-        
+    @IBAction func addToCartButton(_ sender: AnyObject) {
+        let fetchRequest = NSFetchRequest<Products>(entityName: "Cart")
+        let displayProducts = DisplayProducts()
+        let buttonPosition: CGPoint = sender.convert(CGPoint.zero, to: displayProducts.tableView)
+        let indexPath = displayProducts.tableView.indexPathForRow(at: buttonPosition)
+        let currentProduct = displayProducts.products[(indexPath?.row)!]
+        print(currentProduct.name)
         
     }
     
